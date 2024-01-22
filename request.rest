@@ -1,0 +1,65 @@
+// Create a user
+POST http://localhost:5006/users
+Content-Type: application/json
+
+{
+  "name": "Ferdi",
+  "email": "ferdi@gmail.com",
+  "password": "12345",
+  "confPassword": "12345",
+  "role": "user"
+}
+
+// Get all Users
+###
+GET http://localhost:5006/users
+
+//Get Single User
+###
+GET http://localhost/5006/users
+
+// Update User
+###
+PATCH http://localhost/5006/users/5498f39f-a0ec-48ca-b738-c30e44f78ba8
+Content-Type: application/json
+
+{
+   "name": "Deni",
+  "email": "deni@gmail.com",
+  "password": "123456",
+  "confPassword": "123456",
+  "role": "user"
+}
+
+// Delete User
+###
+DELETE http://localhost:5006/users/5498f39f-a0ec-48ca-b738-c30e44f78ba8
+
+// Login Admin
+###
+POST http://localhost:5006/login
+Content-Type: application/json
+
+{
+  "email": "jeni@gmail.com",
+  "password": "123456"
+}
+
+//Login User
+###
+POST http://localhost:5006/login
+Content-Type: application/json
+
+{
+  "email": "rini@gmail.com",
+  "password": "123456"
+}
+
+// Get Me
+###
+GET http://localhost:5006/me
+
+// Logout
+###
+DELETE http://localhost:5006/logout
+
